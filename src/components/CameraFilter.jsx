@@ -67,28 +67,29 @@ function CamerasFilter() {
             />
           </h2>
           <ModalPopupBox isOpen={isOpenInfoModal}>
-            <Backdrop onClick={openInfoModalHandler} />
-            <div
-              className={`bg-[rgba(0,0,0,.75)] p-8 rounded-md ${
-                isOpenInfoModal ? 'z-30' : ''
-              }`}
-            >
-              <h2 className="text-center mb-4">Rover Cameras</h2>
-              <ul>
-                {camerasName.map((cam) => {
-                  return (
-                    <li key={cam.shortName}>
-                      <p className="my-1">
-                        <span className="font-bold">{cam.shortName}</span>:{' '}
-                        {cam.longName}
-                      </p>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+            <>
+              <Backdrop onClick={openInfoModalHandler} />
+              <div
+                className={`bg-[rgba(0,0,0,.75)] p-8 rounded-md ${
+                  isOpenInfoModal ? 'z-30' : ''
+                }`}
+              >
+                <h2 className="text-center mb-4">Rover Cameras</h2>
+                <ul>
+                  {camerasName.map((cam) => {
+                    return (
+                      <li key={cam.shortName}>
+                        <p className="my-1">
+                          <span className="font-bold">{cam.shortName}</span>:{' '}
+                          {cam.longName}
+                        </p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </>
           </ModalPopupBox>
-          <div className="fixed w-screen h-screen z-20"></div>
 
           <FormGroup onClick={checkHandler}>
             <div className="flex flex-row flex-wrap gap-x-4 gap-y-2 items-center justify-center max-w-[520px]">
@@ -99,7 +100,9 @@ function CamerasFilter() {
                   label={cam}
                   name={cam}
                   sx={{
-                    '&': { marginRight: 4 },
+                    '&': {
+                      marginRight: 4,
+                    },
                     svg: {
                       fill: 'white',
                     },

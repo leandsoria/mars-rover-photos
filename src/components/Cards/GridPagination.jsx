@@ -5,6 +5,7 @@ function GridPagination({ onClick, currentPage, count }) {
   const paginationParams = {
     size: 'large',
     color: 'primary',
+    siblingCount: 0,
     sx: [
       {
         '& button, & div': { color: '#FFF' },
@@ -23,7 +24,7 @@ function GridPagination({ onClick, currentPage, count }) {
       onChange={onClick}
       count={count}
       page={currentPage}
-      className="mb-8"
+      className="mb-4"
       {...paginationParams}
     />
   );

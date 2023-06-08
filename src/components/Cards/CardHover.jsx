@@ -38,6 +38,7 @@ function CardHover({
     },
   ];
 
+  /* Create a hook for local storage */
   const setFavouriteHandler = () => {
     setIsBookmarked(!isBookmarked);
     let favouriteArray = [];
@@ -85,7 +86,7 @@ function CardHover({
   }, [photoId]);
 
   return (
-    <div className="w-full max-w-full sm:max-w-[50%] md:max-w-[calc(100%_/_3_-_36px)] xl:max-w-[calc(20%_-_36px)] min-h-[350px] aspect-square flex flex-col justify-end rounded-md p-4 text-white font-semibold relative group overflow-hidden cursor-pointer transition-all ease-in-out ">
+    <div className="w-full max-w-full sm:max-w-[50%] md:max-w-[calc(100%_/_3_-_24px)] xl:max-w-[calc(20%_-_24px)] min-h-[300px] aspect-square flex flex-col justify-end rounded-md p-4 text-white font-semibold relative group overflow-hidden cursor-pointer transition-all ease-in-out ">
       <Icon
         component={isBookmarked ? StarIcon : StarBorderIcon}
         sx={starClasses}

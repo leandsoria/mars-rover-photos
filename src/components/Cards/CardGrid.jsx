@@ -26,13 +26,13 @@ function CardGrid() {
 
   useEffect(() => {}, [slicedRoverImagesArray]);
   return (
-    <div className="flex flex-col py-8 w-full justify-center items-center">
+    <div className="flex flex-col py-12 w-full justify-center items-center">
       <GridPagination
         onClick={pageHandler}
         count={count || 0}
         page={currentPage}
       />
-      <div className="flex flex-row flex-wrap justify-center gap-9 w-full">
+      <div className="flex flex-row flex-wrap justify-center gap-6 w-full">
         <CardResponse />
         {slicedRoverImagesArray &&
           !isLoading &&
