@@ -19,12 +19,10 @@ function CardGrid() {
     count,
     setCurrentPage,
   } = useGetRoverDataPage();
-  const roverData = useGetRoverDataPage();
   /* PAGINATION HANDLER*/
   const pageHandler = (e, page) => {
     setCurrentPage(page);
   };
-  console.log(roverData);
 
   useEffect(() => {}, [slicedRoverImagesArray]);
   return (

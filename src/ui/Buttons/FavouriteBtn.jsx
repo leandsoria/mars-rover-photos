@@ -16,7 +16,7 @@ function BookmarkedBtn() {
         isSelected ? 'text-white bg-[#2a2a2a] border border-[#646cff]' : ''
       }`}
     >
-      Show Bookmarked
+      My Photos
     </button>
   );
 }

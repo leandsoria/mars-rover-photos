@@ -23,6 +23,7 @@ const useUrlHandler = (rover) => {
   if (import.meta.env.VITE_VERCEL_NASA_API_KEY) {
     key = import.meta.env.VITE_VERCEL_NASA_API_KEY;
   } else {
+    // eslint-disable-next-line no-undef
     key = process.env.VITE_VERCEL_NASA_API_KEY;
   }
 
