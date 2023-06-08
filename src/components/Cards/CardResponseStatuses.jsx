@@ -20,7 +20,7 @@ export function StatusMessage() {
       {error && <ErrorMessage />}
       {!isLoading &&
         showBookmarkedPhotos &&
-        slicedBookmarkedRoverImagesArray.length === 0 && <NoBookmarkedImgs />}
+        slicedBookmarkedRoverImagesArray?.length === 0 && <NoBookmarkedImgs />}
       {!isLoading && slicedRoverImagesArray?.length === 0 && <NoImages />}
     </>
   );
