@@ -13,13 +13,15 @@ export function StatusMessage() {
     showBookmarkedPhotos,
     slicedBookmarkedRoverImagesArray,
   } = useGetRoverDataPage();
-  if (isLoading) return <LoadSpinning />;
-  if (error) return <ErrorMessage />;
-  if (
-    !isLoading &&
-    showBookmarkedPhotos &&
-    slicedBookmarkedRoverImagesArray?.length === 0
-  )
-    return <NoBookmarkedImgs />;
-  if (!isLoading && slicedRoverImagesArray?.length === 0) return <NoImages />;
+
+  return (
+    <>
+      {isLoading && <LoadSpinning />}
+      {error && <ErrorMessage />}
+      {!isLoading &&
+        showBookmarkedPhotos &&
+        slicedBookmarkedRoverImagesArray.length === 0 && <NoBookmarkedImgs />}
+      {!isLoading && slicedRoverImagesArray?.length === 0 && <NoImages />}
+    </>
+  );
 }

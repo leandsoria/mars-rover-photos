@@ -32,6 +32,7 @@ function CardGrid() {
         count={count || 0}
         page={currentPage}
       />
+
       <div className="flex flex-row flex-wrap justify-center gap-6 w-full">
         <CardResponse />
         {slicedRoverImagesArray &&

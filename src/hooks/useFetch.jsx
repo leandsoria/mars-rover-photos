@@ -20,8 +20,11 @@ export function useFetch(rover) {
       })
       .catch((err) => setError(err))
       .finally(() => {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
       });
-  }, [rover, setIsLoaded, dateType, earthDate, solDate]);
+  }, [rover, dateType, earthDate, solDate]);
+  // rover, setIsLoaded, dateType, earthDate, solDate
   return { data, error, isLoading };
 }
