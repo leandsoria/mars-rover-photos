@@ -27,12 +27,7 @@ const useUrlHandler = (rover) => {
   }
 
   // import.meta.env.VITE_VERCEL_NASA_URL +
-  const URL =
-    'https://api.nasa.gov/mars-photos/api/v1/rovers/' +
-    rover +
-    '/photos?' +
-    dateTypeResult +
-    key;
+  const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?${dateTypeResult}${key}`;
   return URL;
 };
 
