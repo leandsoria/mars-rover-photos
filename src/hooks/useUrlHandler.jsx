@@ -19,13 +19,20 @@ const useUrlHandler = (rover) => {
     if (dateType === 'earth') return earthDateHandler();
   }
   const dateTypeResult = dateTypeHandler();
+  let key = '';
+  if (import.meta.env.VITE_VERCEL_NASA_API_KEY) {
+    key = import.meta.env.VITE_VERCEL_NASA_API_KEY;
+  } else {
+    key = process.env.VITE_VERCEL_NASA_API_KEY;
+  }
 
+  // import.meta.env.VITE_VERCEL_NASA_URL +
   const URL =
-    import.meta.env.VITE_VERCEL_NASA_URL +
+    'https://api.nasa.gov/mars-photos/api/v1/rovers/' +
     rover +
     '/photos?' +
     dateTypeResult +
-    import.meta.env.VITE_VERCEL_NASA_API_KEY;
+    key;
   return URL;
 };
 
