@@ -21,11 +21,11 @@ const useUrlHandler = (rover) => {
   const dateTypeResult = dateTypeHandler();
 
   const URL =
-    import.meta.env.VITE_NASA_URL +
+    import.meta.env.VITE_VERCEL_NASA_URL +
     rover +
     '/photos?' +
     dateTypeResult +
-    import.meta.env.VITE_NASA_API_KEY;
+    import.meta.env.VITE_VERCEL_NASA_API_KEY;
   return URL;
 };
 
