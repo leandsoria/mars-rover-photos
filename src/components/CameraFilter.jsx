@@ -52,7 +52,6 @@ function CamerasFilter() {
     setIsOpenInfoModal(!isOpenInfoModal);
   };
 
-  console.log(camerasName);
   return (
     <>
       {!isLoaded && !firstLoad && <LoadSpinning />}
